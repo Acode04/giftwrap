@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gift</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black min-h-screen font-poppins text-white">
+
+  <button onclick="goBack()"
+    class="fixed top-4 left-4 px-3 py-2 bg-white/80 text-black rounded-full shadow">
+    ← Back
+  </button>
+
+  <main class="min-h-screen flex flex-col items-center justify-center px-6">
+    <video controls class="max-w-3xl w-full rounded-xl shadow">
+      <source src="assets/videos/memory.mp4" type="video/mp4">
+    </video>
+
+    <p class="mt-6 text-center opacity-80 max-w-xl">
+      A small moment worth replaying.
+    </p>
+  </main>
+
+  <script src="js/common.js"></script>
+</body>
+</html>

@@ -5,19 +5,19 @@ const screenHistory = [0];
 
 const giftData = [
   {
-    image: 'assets/icons/antu.png',
+    image: 'assets/gifts/gift1.jpeg',
     title: 'Do you remember our first kiss?',
     message:
       'You played this song that night. Everything felt right, paused just for us.'
   },
   {
-    image: 'assets/icons/couple.png',
+    image: 'assets/gifts/gift2.jpeg',
     title: 'A little reminder',
     message:
       'No matter how busy life gets, you will always be my favorite place to return to.'
   },
   {
-    image: 'assets/icons/couple.png',
+    image: 'assets/gifts/gift3.jpeg',
     title: 'For you ❤️',
     message:
       'This is just a small way of saying how much you mean to me.'

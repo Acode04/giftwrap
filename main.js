@@ -5,7 +5,7 @@ const screenHistory = [0];
 
 const giftData = [
   {
-    image: 'assets/gifts/gift1.jpeg',
+    image: 'assets/icons/letter.png',
     title: 'Do you remember our first kiss?',
     message:
       'You played this song that night. Everything felt right, paused just for us.'

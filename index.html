@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gift</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+  <main id="app"
+    class="relative w-full max-w-md md:max-w-4xl bg-white min-h-screen md:min-h-[90vh] overflow-hidden">
+
+    <!-- BACK BUTTON -->
+    <button id="backBtn"
+      onclick="goHome()"
+      class="absolute top-4 left-4 z-50 hidden
+             flex items-center gap-2
+             bg-white/80 backdrop-blur
+             px-3 py-2 rounded-full
+             text-gray-700 font-medium shadow">
+      ← Back
+    </button>
+
+    <!-- SCREEN 0 -->
+    <section class="screen absolute inset-0 flex flex-col items-center justify-center gap-8 px-6">
+      <h1 class="text-2xl md:text-4xl font-bold text-center">PLS ACCEPT THE GIFT</h1>
+      <img src="assets/cats/gift.png" class="w-40 h-40 object-contain" />
+      <div class="flex gap-6">
+        <button onclick="goYes()" class="btn">YES</button>
+        <button onclick="goNo()" class="btn">NO</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 1 -->
+    <section class="screen absolute inset-0 hidden flex flex-col items-center justify-center gap-8 px-6">
+      <h1 class="text-2xl md:text-4xl font-bold">HOW DARE YOU!</h1>
+      <img src="assets/cats/angry.png" class="w-40 h-40 object-contain" />
+      <button onclick="goHome()" class="btn px-10">TRY AGAIN</button>
+    </section>
+
+    <!-- SCREEN 2 -->
+    <section class="screen absolute inset-0 hidden flex flex-col items-center justify-center gap-6 px-6">
+      <h1 class="text-2xl md:text-4xl font-bold">PRESENT FOR YOU</h1>
+
+      <div class="grid grid-cols-3 gap-4 w-full max-w-xl">
+        <img src="assets/gifts/gift1.png" onclick="showScreen(3)" class="gift" />
+        <img src="assets/gifts/gift2.png" onclick="showScreen(3)" class="gift" />
+        <img src="assets/gifts/gift3.png" onclick="showScreen(3)" class="gift" />
+      </div>
+
+      <p class="text-gray-600">CLICK ANY GIFT TO OPEN</p>
+    </section>
+
+    <!-- SCREEN 3 -->
+    <section class="screen absolute inset-0 hidden px-6 py-8 overflow-y-auto">
+
+      <!-- Floating icons -->
+      <div class="floating-icons pointer-events-none absolute inset-0">
+        <img src="assets/icons/heart.svg" class="floating-icon left-10 top-20" />
+        <img src="assets/icons/music.svg" class="floating-icon right-12 top-40" />
+      </div>
+
+      <div class="relative grid md:grid-cols-2 gap-8 items-start">
+        <div class="bg-red-300 rounded-xl p-4">
+          <img src="assets/cats/couple.png" class="rounded-lg" />
+        </div>
+
+        <div class="text-gray-700 leading-relaxed">
+          <p class="font-semibold mb-4">Do you remember our first kiss?</p>
+          <p>
+            You played this song that night. Everything felt right, paused just for us.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+
+  <style>
+    .btn {
+      @apply px-8 py-3 rounded-full bg-red-400 text-white font-semibold hover:bg-red-500;
+    }
+    .gift {
+      @apply aspect-square rounded-xl cursor-pointer hover:scale-105 transition;
+    }
+    .floating-icon {
+      width: 32px;
+      position: absolute;
+      opacity: 0.8;
+    }
+  </style>
+
+</body>
+</html>
